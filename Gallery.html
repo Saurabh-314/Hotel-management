@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+	}
+.centered {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.centered  h1 {
+	font-size:57px;
+	color:#01d7a7 !important;
+	line-height:65px;
+	style:bold;	
+	}
+.active-menu {
+	background-color:red;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="css/navbar.css"> 
+</head>
+<body>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Login
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     <a href="admin/index.html">Admin Login</a>
+	 <a href="user/user_login.html">User Login</a>
+    </div>
+  </div> 
+  <a href="team/team.html">Team</a>
+  <a class="active-menu" href="Gallery.html">Gallery</a>
+  <a href="About.html">About</a>
+  <a href="feedback/feedback.html">Feedback</a>
+</div>
+<div class="row">
+  <div class="column">
+  <a href="images/g1.jpg" class="swipebox"><img src="images/g1.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  
+  </div>
+  <div class="column">
+    <a href="images/g2.jpg" class="swipebox"><img src="images/g2.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <a href="images/g3.jpg" class="swipebox"><img src="images/g3.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+  <a href="images/g4.jpg" class="swipebox"><img src="images/g4.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div>
+ <div class="column">
+  <a href="images/g5.jpg" class="swipebox"><img src="images/g5.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div>
+ <div class="column">
+  <a href="images/g6.jpg" class="swipebox"><img src="images/g6.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+ <div class="column">
+  <a href="images/g7.jpg" class="swipebox"><img src="images/g7.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div>
+ <div class="column">
+  <a href="images/g8.jpg" class="swipebox"><img src="images/g8.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div>
+ <div class="column">
+  <a href="images/r4.jpg" class="swipebox"><img src="images/r4.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div>
+ <div class="column">
+  <a href="images/r1.jpg" class="swipebox"><img src="images/r1.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div> <div class="column">
+  <a href="images/r2.jpg" class="swipebox"><img src="images/r2.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div> <div class="column">
+  <a href="images/r3.jpg" class="swipebox"><img src="images/r3.jpg" style="width:100%" class="img-responsive" alt="/" onclick="myFunction(this);">
+  </div>
+</div>
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+
+
+<div class="container">
+  <a href="images/g1.jpg" class="swipebox"><img src="images/g1.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h1>SUN RISE</h1></div>
+  </div>
+</div>
+<div class="container">
+  <a href="images/g2.jpg" class="swipebox"><img src="images/g2.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div><div class="container">
+  <a href="images/g3.jpg" class="swipebox"><img src="images/g3.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+<div class="container">
+<a href="images/g4.jpg" class="swipebox"><img src="images/g4.jpg" class="img-responsive" alt="/">
+  
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+<div class="container">
+  <a href="images/g5.jpg" class="swipebox"><img src="images/g5.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+<div class="container">
+  <a href="images/g6.jpg" class="swipebox"><img src="images/g6.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+  <div class="container">
+  <a href="images/g7.jpg" class="swipebox"><img src="images/g7.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+ <div class="container">
+<a href="images/g8.jpg" class="swipebox"><img src="images/g8.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+ <div class="container">
+  <a href="images/r1.jpg" class="swipebox"><img src="images/r1.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+<div class="container">
+  <a href="images/r2.jpg" class="swipebox"><img src="images/r2.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+<div class="container">
+  <a href="images/r3.jpg" class="swipebox"><img src="images/r3.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+<div class="container">
+  <a href="images/r4.jpg" class="swipebox"><img src="images/r4.jpg" class="img-responsive" alt="/">
+  <div class="overlay">
+    <div class="text"><h2>SUN RISE</h2></div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+h3{
+  font-family: bold script; 
+  font-size: 25pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:Red;
+  text-align: center; 
+}
+
+table{
+  font-family: Calibri; 
+  color:white; 
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  text-align:; 
+  /* background-color: SlateBlue;  */
+  border-collapse: collapse; 
+  border: 2px solid navy
+}
+/* table.inner{ */
+  /* border: 0px */
+}
